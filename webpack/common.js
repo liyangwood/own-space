@@ -5,11 +5,14 @@ const resolve = require('./util').resolve;
 
 module.exports = {
 	entry: {
-		main: resolve('./src/app.js'),
+		main: [
+			resolve('./src/app.js')
+		],
 		polyfills: resolve('./webpack/polyfills.js'),
 		lib: [
 			'react'
-		],
+		]
+		// style: resolve('./src/style/index.scss')
 	},
 	output: {
 		path: resolve('./dist'),
