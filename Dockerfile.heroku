@@ -1,8 +1,12 @@
 FROM nginx:alpine
 
-WORKDIR /
-COPY dist /www/dist
+ADD dist /www/dist
 COPY nginx/proxy.prod.conf /etc/nginx/conf.d/proxy.conf
+WORKDIR /www
+
+RUN chmod -R a+w /www && chmod -R 777 /www
+RUN chmod -R a+w /var/cache/nginx && chmod -R 777 /var/cache/nginx
+RUN chmod -R a+w /etc/nginx && chmod -R 777 /etc/nginx
 
 # Expose is NOT supported by Heroku
 # EXPOSE 5000
