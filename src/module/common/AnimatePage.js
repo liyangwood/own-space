@@ -46,7 +46,7 @@ export default class extends BaseComponent{
 			<Motion {...mp}>
 				{
 					(tar)=>{
-						return <div style={this.targetStyle(tar)}>{this.renderPage(p)}</div>
+						return (<div style={this.targetStyle(tar)}>{this.renderPage(p)}</div>);
 					}
 				}
 			</Motion>

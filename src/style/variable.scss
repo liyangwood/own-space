@@ -4,9 +4,31 @@
   justify-content: center;
   align-items: center;
 }
+.font_0{
+  font: normal normal bold 43px/1.2em 'Noticia Text',serif;
+  color: #4d4d4d;
+  line-height: normal;
+  letter-spacing: normal;
+
+  a{
+    color: inherit;
+  }
+}
+
+.active_enable{
+
+  &.active{
+    color: #61d0ad !important;
+  }
+  &:hover{
+    color: #61d0ad !important;
+    transition: color 0.4s ease 0s !important;
+  }
+}
 
 /* common */
 $main_width: 980px;
 
 /* color */
 $color_bg: #eae5e5;
+$color_active_link: #61d0ad;

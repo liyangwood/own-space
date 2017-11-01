@@ -1,3 +1,5 @@
+import I18N from 'app/I18N';
+
 import HomePage from 'app/module/Home/HomePageComponent';
 import Resume from 'app/module/Resume/ResumeComponent';
 
@@ -5,19 +7,19 @@ export default {
 	header_nav : [
 		{
 			path : '/',
-			name : 'Home'
+			name : I18N.get('nav.home')
 		},
 		{
 			path : '/resume',
-			name : 'AAA'
+			name : I18N.get('nav.resume')
 		},
 		{
 			path : '/project',
-			name : 'BBB'
+			name : I18N.get('nav.project')
 		},
 		{
 			path : '/contact',
-			name : 'DCCC'
+			name : I18N.get('nav.contact')
 		}
 	],
 

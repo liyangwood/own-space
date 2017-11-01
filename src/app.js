@@ -1,3 +1,5 @@
+import './boot';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import _ from 'lodash';
@@ -10,6 +12,7 @@ import 'app/style/index.scss';
 import TransitionGroup from "react-transition-group/TransitionGroup";
 
 import RouterConfig from 'app/config/router';
+import I18N from 'app/I18N';
 
 
 const middleware = (render, props)=>{
@@ -26,17 +29,38 @@ const firstChild = (props)=>{
 };
 
 const App = ()=>{
+	const lang = I18N.getLang();
+	const getLangClassName = (l)=>{
+		return 'active_enable'+(lang===l?' active':'');
+	};
+	const changeLang = (l)=>{
+		localStorage.setItem('lang', l);
+		location.reload(true);
+	};
+
 	return (
 		<div id="main_box">
 			<header id="main_header">
-				<h4>This is header</h4>
-				<Route path="/user" component={HomePage} />
+				<div className="h_left">
+					<h1 className="font_0">
+						<Link to="/">Jacky Li</Link>
+					</h1>
+					<h4 className="font_0">
+						<Link to="/">Javascript developer</Link>
+					</h4>
+				</div>
+
+				<div className="h_lang">
+					<span onClick={()=>changeLang('en')} className={getLangClassName('en')}>{I18N.get('english')}</span>
+					<span>|</span>
+					<span onClick={()=>changeLang('zh')} className={getLangClassName('zh')}>{I18N.get('chinese')}</span>
+				</div>
 
 				<nav className="h_nav">
 					{
 						_.map(RouterConfig.header_nav, (item, i)=>{
 							return (
-								<NavLink to={item.path} key={i} exact activeClassName="active">{item.name}</NavLink>
+								<NavLink to={item.path} key={i} exact className="active_enable" activeClassName="active">{item.name}</NavLink>
 							);
 						})
 					}

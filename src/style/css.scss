@@ -10,6 +10,10 @@
   background: transparent;
 }
 
+a{
+  text-decoration: none;
+}
+
 /* main layout */
 html, body{
   height: 100%;
@@ -18,7 +22,6 @@ html, body{
 
 }
 body{
-  text-align: center;
   background: $color_bg;
   font-size: 24px;
 }
@@ -36,18 +39,55 @@ body{
 
 #main_header{
   height: 150px;
+  position: relative;
+
+  .h_left{
+    left: 77px;
+    width: 265px;
+    position: absolute;
+    top: 35px;
+    text-align: left;
+
+    .font_0:first-child{
+      font-weight: bold;
+    }
+
+    .font_0:last-child{
+      font-size:18px;
+    }
+  }
 
   .h_nav{
+    left: 342px;
+    width: 638px;
+    position: absolute;
+    top: 87px;
+    height: 29px;
 
     a{
-      font-size:18px;
-      margin-right:10px;
+      font-size:16px;
+      margin-right: 30px;
       text-decoration: none;
+      color: #8b8b8b;
+      font-weight:bold;
     }
 
     a.active{
       color: #e83556;
       font-weight: bold;
+    }
+  }
+
+  .h_lang{
+    position: absolute;
+    right:0;
+    top:10px;
+
+    span{
+      cursor:pointer;
+      font-size: 12px;
+      color: #969696;
+      margin-left: 10px;
     }
   }
 }
