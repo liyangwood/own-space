@@ -34,6 +34,7 @@ module.exports = {
 			},
 			{
 				test: /\.css$/,
+				include : [resolve('node_modules/bootstrap/dist/css')],
 				use: [
 					'style-loader',
 					'css-loader',
@@ -48,7 +49,7 @@ module.exports = {
 				],
 			},
 			{
-				test: /\.(png|jpg|jpeg|gif|svg)$/,
+				test: /\.(png|jpg|jpeg|gif|svg|eot|ttf|woff|woff2)$/,
 				use: [
 					'file-loader',
 				],

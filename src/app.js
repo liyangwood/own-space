@@ -14,6 +14,8 @@ import TransitionGroup from "react-transition-group/TransitionGroup";
 import RouterConfig from 'app/config/router';
 import I18N from 'app/I18N';
 
+import {AppHeader} from "app/module/layout/LayoutComponent";
+
 
 const middleware = (render, props)=>{
 	return render;
@@ -40,7 +42,7 @@ const App = ()=>{
 
 	return (
 		<div id="main_box">
-			<header id="main_header">
+			{/*<header id="main_header">
 				<div className="h_left">
 					<h1 className="font_0">
 						<Link to="/">Jacky Li</Link>
@@ -64,8 +66,11 @@ const App = ()=>{
 							);
 						})
 					}
+					<AppHeader />
 				</nav>
-			</header>
+			</header>*/}
+
+			<AppHeader />
 
 			<main id="main_content">
 				{
