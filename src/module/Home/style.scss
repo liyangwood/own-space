@@ -1,3 +1,52 @@
 .home_homepage{
-  background: red;
+  padding: 40px 0 0;
+
+  .box_left{
+    margin: 0 $gap1;
+    img{
+      max-width:100%;
+      border-radius: 50%;
+    }
+  }
+
+  .box_right{
+    margin: 0 $gap1;
+
+    .r_bx{
+      padding-left: 5px;
+      margin-top: 25px;
+    }
+
+    .r_btn{
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      display: flex;
+      font-size: 13px;
+      transition: color 0.4s ease 0s;
+      color: #FFFFFF;
+      align-items: center;
+      justify-content: center;
+
+      &:hover{
+        opacity: 0.8
+      }
+    }
+
+    .font_10{
+      margin-top: 24px;
+    }
+  }
+}
+
+@media(max-width:768px){
+  .home_homepage{
+
+    .box_right{
+      .r_btn{
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
 }

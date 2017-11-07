@@ -3,6 +3,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const resolve = require('./util').resolve;
 
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
+const extractSass = new ExtractTextPlugin({
+	filename: "app.[contenthash:6].css"
+});
+
 module.exports = {
 	entry: {
 		main: [
@@ -12,7 +18,6 @@ module.exports = {
 		lib: [
 			'react'
 		]
-		// style: resolve('./src/style/index.scss')
 	},
 	output: {
 		path: resolve('./dist'),
@@ -36,18 +41,27 @@ module.exports = {
 				test: /\.css$/,
 				include : [resolve('node_modules/bootstrap/dist/css')],
 				use: [
-					'style-loader',
-					'css-loader',
+					'css-loader'
 				],
 			},
 			{
 				test: /\.scss$/,
-				use: [
-					'style-loader',
-					'css-loader',
-					'sass-loader',
-				],
+				use: extractSass.extract([
+					{
+						loader: "css-loader",
+						options: {
+							// sourceMap: true
+						}
+					},
+					{
+						loader: "sass-loader",
+						options: {
+							sourceMap: true
+						}
+					}
+				])
 			},
+
 			{
 				test: /\.(png|jpg|jpeg|gif|svg|eot|ttf|woff|woff2)$/,
 				use: [
@@ -57,6 +71,7 @@ module.exports = {
 		],
 	},
 	plugins: [
+		extractSass,
 		new HtmlWebpackPlugin({
 			title: 'Template',
 			template: resolve('./public/index.html'),
