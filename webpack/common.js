@@ -4,10 +4,27 @@ const webpack = require('webpack');
 const resolve = require('./util').resolve;
 
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const extractSass = new ExtractTextPlugin({
 	filename: "app.[contenthash:6].css"
 });
+
+const isDev = process.env.NODE_ENV === 'development';
+
+const plugins = [
+	extractSass,
+	new HtmlWebpackPlugin({
+		title: 'Template',
+		template: resolve('./public/index.html'),
+	}),
+	new webpack.optimize.CommonsChunkPlugin({
+		name: 'lib',
+	})
+];
+if(!isDev){
+	plugins.push(new OptimizeCssAssetsPlugin());
+}
 
 module.exports = {
 	entry: {
@@ -37,11 +54,17 @@ module.exports = {
 				],
 				exclude: /node_modules/,
 			},
+
 			{
 				test: /\.css$/,
 				include : [resolve('node_modules/bootstrap/dist/css')],
 				use: [
-					'css-loader'
+					{
+						loader: "css-loader",
+						options: {
+
+						}
+					}
 				],
 			},
 			{
@@ -50,13 +73,13 @@ module.exports = {
 					{
 						loader: "css-loader",
 						options: {
-							// sourceMap: true
+							sourceMap: true,
 						}
 					},
 					{
 						loader: "sass-loader",
 						options: {
-							sourceMap: true
+							sourceMap: true,
 						}
 					}
 				])
@@ -70,17 +93,5 @@ module.exports = {
 			},
 		],
 	},
-	plugins: [
-		extractSass,
-		new HtmlWebpackPlugin({
-			title: 'Template',
-			template: resolve('./public/index.html'),
-		}),
-		new webpack.optimize.CommonsChunkPlugin({
-			name: 'lib',
-		}),
-		// new webpack.optimize.CommonsChunkPlugin({
-		//   name: 'runtime'
-		// })
-	],
+	plugins
 };

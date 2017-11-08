@@ -23,12 +23,11 @@ const config = {
 		chunkFilename: '[name].[chunkhash:12].chunk.js',
 	},
 	plugins: [
-		// This plugin will cause hashes to be based on the relative path of
-		// the module, generating a four character string as the module id,
-		// better for browser cache, browser will not need to fetch module again
-		// if module name/content is unchanged after production build
 		new webpack.HashedModuleIdsPlugin(),
 		CleanWebpackPluginConfig,
+		new webpack.optimize.UglifyJsPlugin({
+			minimize: true
+		})
 	],
 }
 
