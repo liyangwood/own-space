@@ -10,7 +10,9 @@
     "clean": "rimraf dist",
     "build": "npm run clean && BABEL_ENV=production NODE_ENV=production webpack --config ./webpack/webpack.prod.js --progress",
     "lint": "eslint ./src/**/**.js",
-    "test": "jest"
+    "test": "jest",
+
+    "dockerhub": "npm run build && . ./deploy/build.sh"
   },
   "author": "liyangwood@gmail.com",
   "jest": {
