@@ -3,6 +3,9 @@ import AnimatePage from 'app/module/common/AnimatePage';
 import * as RB from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import I18N from 'app/I18N';
+import config from 'app/config';
+
+const avator = config.getDropboxFileUrl('s/lwzzzfelo8vwp9t/user-avatar.png');
 
 export default class extends AnimatePage{
 	renderPage(){
@@ -23,7 +26,7 @@ export default class extends AnimatePage{
 	renderLeft(){
 		return (
 			<div className="box_left">
-				<img src="https://static.wixstatic.com/media/84770f_71b71726d1644b0baa8482970c919460.jpg/v1/fill/w_770,h_760,al_c,q_85,usm_0.66_1.00_0.01/84770f_71b71726d1644b0baa8482970c919460.webp" />
+				<img src={avator} />
 			</div>
 		);
 	}
