@@ -1,0 +1,45 @@
+.contact_page{
+  padding: 40px 0 10px 60px;
+
+  .r_tlt{
+    margin-bottom: 36px;
+    font-weight: normal;
+  }
+
+  .c_a{
+    padding-top: 20px;
+    .c_1, .c_2{
+      margin-top: 10px;
+      background: rgba(232, 53, 86, 1);
+      color: #fff;
+      @extend .font_10;
+
+      &::placeholder{
+        color : #e5e5e5;
+      }
+    }
+    .c_2{
+      resize: none;
+      height: 80px;
+    }
+  }
+
+  .c_btn_box{
+    position: relative;
+
+    .c_b1, .c_b2{
+      width: 120px;
+      @extend .font_9;
+    }
+
+    .c_b2{
+      color: #fff;
+      position: absolute;
+      right:0;
+      background: rgba(232, 53, 86, 1);
+      &:hover{
+        background: rgba(232, 53, 86, 0.8);
+      }
+    }
+  }
+}

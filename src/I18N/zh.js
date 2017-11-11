@@ -11,6 +11,10 @@ export default {
 	'00001' : '您好',
 	'00002' : '关于我',
 	'00003' : '我是一个js开发者，专注与web开发很多年，全栈专家。',
+	'00004' : '专业技能',
+	'00005' : '工作经历',
+	'00006' : '教育',
+	'00007' : '技能',
 
 	resume : {
 		firstName : 'Li',
@@ -49,19 +53,31 @@ export default {
 				production : [
 
 				]
-			},
-			{
-				startTime : ''
 			}
 		],
 
 		education : [
-
+			{
+				startTime : '2002.09',
+				endTime : '2006.07',
+				name : '大连工业大学'
+			}
 		],
 
 		skill : [
-
+			'javascript, typescript, node',
+			'react, angular, vue',
+			'react native, meteor, ionic',
+			'express, koa',
+			'ios native',
+			'mongo, mysql, redis, memcache',
+			'architecture and solution design',
+			'devopts, docker, jenkins',
+			'blockchain, Ethereum',
+			'php, python',
+			'scrum, pmp',
+			'UE/UX'
 		]
 
 	}
-}
+};

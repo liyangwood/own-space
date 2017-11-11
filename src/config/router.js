@@ -2,6 +2,7 @@ import I18N from 'app/I18N';
 
 import HomePage from 'app/module/Home/HomePageComponent';
 import Resume from 'app/module/Resume/ResumeComponent';
+import Contact from 'app/module/Contact/ContactComponent';
 
 export default {
 	header_nav : [
@@ -31,6 +32,10 @@ export default {
 		{
 			path : '/resume',
 			screen : Resume
+		},
+		{
+			path : '/contact',
+			screen : Contact
 		}
 	]
 };

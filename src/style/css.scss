@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   -webkit-text-size-adjust:none;
-  font-family:"Noticia Text", serif;
+  font-family: 'noticia text', sans-serif;
   margin: 0;
   padding: 0;
   border: 0;
@@ -14,6 +14,9 @@ h1,h2,h3,h4,h5,h6{
 }
 .row{
   margin: 0;
+}
+p{
+  margin:0;
 }
 
 a{

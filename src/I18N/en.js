@@ -11,7 +11,11 @@ export default {
 	'00001' : 'Hello',
 	'00002' : 'a bit about me',
 	'00003' : 'I am a javascript expert, focus on web for many years. full stack developer.',
-
+	'00004' : 'Professional ​info',
+	'00005' : 'Work experience​',
+	'00006' : 'Education',
+	'00007' : 'Skill',
+	'00008' : 'Looking forward to answering your email',
 
 	resume : {
 		firstName : 'Jacky',
@@ -29,7 +33,7 @@ export default {
 				company : 'IHealthlabs.Inc of Singapore',
 				title : 'develop manager',
 				jobDesc : 'build health care software for own products, include all of clients, ',
-				responsibility : '',
+				responsibility : 'build health care software for own products, include all of clients, build health care software for own products, include all of clients, build health care software for own products, include all of clients, build health care software for own products, include all of clients, build health care software for own products, include all of clients, build health care software for own products, include all of clients, build health care software for own products, include all of clients, ',
 				production : [
 					{
 						type : 'IOS',
@@ -50,19 +54,31 @@ export default {
 				production : [
 
 				]
-			},
-			{
-				startTime : ''
 			}
 		],
 
 		education : [
-
+			{
+				startTime : '2002.09',
+				endTime : '2006.07',
+				name : 'Dalian Polytechnic University'
+			}
 		],
 
 		skill : [
-
+			'javascript, typescript, node',
+			'react, angular, vue',
+			'react native, meteor, ionic',
+			'express, koa',
+			'ios native',
+			'mongo, mysql, redis, memcache',
+			'architecture and solution design',
+			'devopts, docker, jenkins',
+			'blockchain, Ethereum',
+			'php, python',
+			'scrum, pmp',
+			'UE/UX'
 		]
 
 	}
-}
+};
