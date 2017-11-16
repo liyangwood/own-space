@@ -23,6 +23,6 @@ export default {
 	},
 
 	get(key){
-		return _.get(all[lang], key, key);
+		return _.get(all[lang], key, _.get(all['en'], key, key));
 	}
 };

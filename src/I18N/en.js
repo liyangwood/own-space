@@ -1,4 +1,9 @@
+import config from 'app/config';
+
 export default {
+	res : {
+		avatar_url : config.getDropboxFileUrl('s/b9hdjq47udouwsg/avatar.jpg?dl=0')
+	},
 	english : 'English',
 	chinese : 'Chinese',
 	nav : {
@@ -18,6 +23,9 @@ export default {
 	'00006' : 'Education',
 	'00007' : 'Skill',
 	'00008' : 'Looking forward to answering your email',
+	'00009' : 'MY RESUME',
+	'00010' : 'MY PROJECTS',
+	'00011' : 'CONTACT ME',
 
 	resume : {
 		firstName : 'Jacky',

@@ -3,9 +3,8 @@ import AnimatePage from 'app/module/common/AnimatePage';
 import * as RB from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import I18N from 'app/I18N';
-import config from 'app/config';
 
-const avator = config.getDropboxFileUrl('s/lwzzzfelo8vwp9t/user-avatar.png');
+const avator = I18N.get('res.avatar_url');
 
 export default class extends AnimatePage{
 	renderPage(){
@@ -39,13 +38,13 @@ export default class extends AnimatePage{
 
 				<RB.Row>
 					<RB.Col className="r_bx" xs={4}>
-						<Link className="r_btn" style={{background:'rgba(232, 53, 86, 1)'}} to="/">MY RESUME</Link>
+						<Link className="r_btn" style={{background:'rgba(232, 53, 86, 1)'}} to="/resume">{I18N.get('00009')}</Link>
 					</RB.Col>
 					<RB.Col className="r_bx" xs={4}>
-						<Link className="r_btn" style={{background:'rgba(97, 208, 212, 1)'}} to="/">MY RESUME</Link>
+						<Link className="r_btn" style={{background:'rgba(97, 208, 212, 1)'}} to="/project">{I18N.get('00010')}</Link>
 					</RB.Col>
 					<RB.Col className="r_bx" xs={4}>
-						<Link className="r_btn" style={{background:'rgba(209, 201, 38, 1)'}} to="/">MY RESUME</Link>
+						<Link className="r_btn" style={{background:'rgba(209, 201, 38, 1)'}} to="/contact">{I18N.get('00011')}</Link>
 					</RB.Col>
 				</RB.Row>
 

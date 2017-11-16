@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 FROM=$PWD;
-V=1.0.0
+V=1.0.1
 
 cd $FROM
 
