@@ -60,8 +60,41 @@ export default {
 				startTime : '2015.09',
 				endTime : '2016.09',
 				company : 'GateChina.Inc',
-				title : 'develop team leader',
+				title : 'full stack developer',
 				jobDesc : 'lead to develop own international production, include website, mobile web, ios and android clients.',
+				responsibility : '',
+				production : [
+
+				]
+			},
+			{
+				startTime : '2013.12',
+				endTime : '2015.09',
+				company : 'HP',
+				title : 'System and Solution Architect',
+				jobDesc : '',
+				responsibility : '',
+				production : [
+
+				]
+			},
+			{
+				startTime : '2011.10',
+				endTime : '2013.12',
+				company : 'Eachcloud.Inc',
+				title : 'R&D Director',
+				jobDesc : '',
+				responsibility : '',
+				production : [
+
+				]
+			},
+			{
+				startTime : '2008.10',
+				endTime : '2011.10',
+				company : 'Sohu.Inc',
+				title : 'web developer',
+				jobDesc : '',
 				responsibility : '',
 				production : [
 

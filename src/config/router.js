@@ -3,6 +3,7 @@ import I18N from 'app/I18N';
 import HomePage from 'app/module/Home/HomePageComponent';
 import Resume from 'app/module/Resume/ResumeComponent';
 import Contact from 'app/module/Contact/ContactComponent';
+import Project from 'app/mddule/Project/ProjectComponent';
 
 export default {
 	header_nav : [
@@ -36,6 +37,10 @@ export default {
 		{
 			path : '/contact',
 			screen : Contact
+		},
+		{
+			path : '/project',
+			screen : Project
 		}
 	]
 };
