@@ -8,6 +8,8 @@ export default {
 		contact : 'CONTACT'
 	},
 
+	email : 'Email',
+
 	'00001' : 'Hello',
 	'00002' : 'a bit about me',
 	'00003' : 'I am a javascript expert, focus on web for many years. full stack developer.',
@@ -24,6 +26,8 @@ export default {
 		email : 'liyangwood@gmail.com',
 		github : 'https://github.com/liyangwood',
 		desc : 'Javascript expert and full stack developer',
+		linkedIn : 'https://www.linkedin.com/in/jacky-li-4039747b/',
+		facebook : 'https://www.facebook.com/liyangwood',
 
 
 		job : [

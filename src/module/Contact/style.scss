@@ -42,4 +42,19 @@
       }
     }
   }
+
+  .a_box{
+    margin-top : 80px;
+
+    a{
+      display: inline-block;
+      overflow: hidden;
+      margin-right: 12px;
+
+      i.fa{
+        font-size: 38px;
+        color: #4d4d4d;
+      }
+    }
+  }
 }

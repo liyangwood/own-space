@@ -21,6 +21,8 @@ export default class extends AnimatePage{
 				<RB.Row>
 					<RB.Col className="m0" md={6}>
 						{this.renderSectionTitle()}
+						{this.renderContactInfo()}
+						{this.renderEmailInfo()}
 					</RB.Col>
 					<RB.Col className="m0" md={6}>
 						{this.renderEmailForm()}
@@ -34,6 +36,34 @@ export default class extends AnimatePage{
 	renderSectionTitle(){
 		return (
 			<h1 className="font_1 r_tlt">CONTACT</h1>
+		);
+	}
+
+	renderContactInfo(){
+		return (
+			<div className="a_box">
+				<a href={I18N.get('resume.github')} target="_blank">
+					<i className="fa fa-github-square"></i>
+				</a>
+				<a href={I18N.get('resume.linkedIn')} target="_blank">
+					<i className="fa fa-linkedin-square"></i>
+				</a>
+				<a href={I18N.get('resume.fackbook')} target="_blank">
+					<i className="fa fa-facebook-square"></i>
+				</a>
+			</div>
+		);
+	}
+
+	renderEmailInfo(){
+		return (
+			<div>
+				<a className="font_8" href={`mailto:${I18N.get('resume.email')}`} target="_blank">
+					{I18N.get('email')}
+					&nbsp;&nbsp;:&nbsp;&nbsp;
+					{I18N.get('resume.email')}
+				</a>
+			</div>
 		);
 	}
 
