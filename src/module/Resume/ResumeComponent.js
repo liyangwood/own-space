@@ -25,7 +25,7 @@ export default class extends AnimatePage{
 
 	renderSectionTitle(){
 		return (
-			<h1 className="font_1 r_tlt">RESUME</h1>
+			<h1 className="font_1 r_tlt">{I18N.get('00012')}</h1>
 		);
 	}
 

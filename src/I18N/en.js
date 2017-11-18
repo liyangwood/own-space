@@ -24,8 +24,11 @@ export default {
 	'00007' : 'Skill',
 	'00008' : 'Looking forward to answering your email',
 	'00009' : 'MY RESUME',
-	'00010' : 'MY PROJECTS',
+	'00010' : 'MY WORK',
 	'00011' : 'CONTACT ME',
+	'00012' : 'RESUME',
+	'00013' : 'LATEST PROJECTS',
+	'00014' : 'To get more information or discuss with me',
 
 	resume : {
 		firstName : 'Jacky',
@@ -48,11 +51,18 @@ export default {
 				responsibility : 'build health care software for own products, include all of clients, build health care software for own products, include all of clients, build health care software for own products, include all of clients, build health care software for own products, include all of clients, build health care software for own products, include all of clients, build health care software for own products, include all of clients, build health care software for own products, include all of clients, ',
 				production : [
 					{
-						type : 'IOS',
-						url : '',
-						name : 'VSM SG',
-						desc : '',
-						skill : 'React, redux, React native, ios, docker, aws'
+						type : 'web',
+						url : 'https://www.vsm.sg',
+						name : 'VSM website',
+						desc : 'This is VSM project website for iHIS, let user monitor his own status easily with real healthcare devices.',
+						skill : 'React, redux, koa, graphql, ant design, docker'
+					},
+					{
+						type : 'ios',
+						url : 'https://itunes.apple.com/cn/app/vsm-sg/id1212098163?mt=8',
+						name : 'VSM SG app',
+						desc : 'This is iPad app for VSM, used by patient to take measurement and update info.',
+						skill : 'React native, graphql, svg, apphub'
 					}
 				]
 			},
@@ -64,7 +74,33 @@ export default {
 				jobDesc : 'lead to develop own international production, include website, mobile web, ios and android clients.',
 				responsibility : '',
 				production : [
-
+					{
+						type : 'web',
+						url : 'http://www.wenxuecity.com/',
+						name : 'wenxuecity website',
+						desc : 'No.1 Chinese website for overseas Chinese outside China. Offers a full spectrum of online information services.'
+					},
+					{
+						type : 'web',
+						name : 'Haiwai website',
+						url : 'http://www.haiwai.com',
+						desc : 'Life classification portal of overseas',
+						skill : 'angular, gulp, bootstrap'
+					},
+					{
+						type : 'ios',
+						name : 'wenxuecity app',
+						url : 'https://itunes.apple.com/sg/app/wenxuecity/id634117610?mt=8',
+						desc : 'mobile app for wenxuecity',
+						skill : 'object-c'
+					},
+					{
+						type : 'ios',
+						name : 'haiwai app',
+						url : 'https://itunes.apple.com/sg/app/%E6%B5%B7%E5%A4%96%E5%90%8C%E5%9F%8E%E5%95%86%E5%AE%B6%E7%89%88/id974815137?mt=8',
+						desc : 'mobile app for haiwai.com',
+						skill : 'ionic, cordova'
+					}
 				]
 			},
 			{
@@ -97,7 +133,12 @@ export default {
 				jobDesc : '',
 				responsibility : '',
 				production : [
-
+					{
+						type : 'web',
+						name : 'sohu weibo',
+						url : 'http://t.sohu.com/',
+						desc : 'weibo of sohu'
+					}
 				]
 			}
 		],

@@ -29,6 +29,10 @@
   font: normal normal normal 46px/1.2em 'noticia text', sans-serif;
   color: #4D4D4D;
 }
+.font_3{
+  font: normal normal normal 24px/1.2em 'noticia text', sans-serif;
+  color: #4D4D4D;
+}
 
 .font_8{
   font: normal normal normal 21px/1.2em 'noticia text', sans-serif;
@@ -72,3 +76,9 @@ $gap1: 24px;
 /* color */
 $color_bg: #eae5e5;
 $color_active_link: #61D0D4;
+$color_1: rgb(232, 53, 86);
+$color_2: rgb(97, 208, 212);
+$color_3: rgb(209, 201, 38);
+$color_border_1: #787878;
+$color_border_2: #b2b2b2;
+$color_border_3: #d9d9d9;

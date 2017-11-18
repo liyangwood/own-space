@@ -3,8 +3,13 @@ import AnimatePage from 'app/module/common/AnimatePage';
 import * as RB from 'react-bootstrap';
 import I18N from 'app/I18N';
 import _ from 'lodash';
+import Mailgun from 'app/model/Mailgun';
 
 export default class extends AnimatePage{
+
+	init(){
+		this.mg = new Mailgun();
+	}
 
 	defineStates(){
 		return {
@@ -94,7 +99,16 @@ export default class extends AnimatePage{
 	}
 
 	sendEmail(){
-
+		const d = {
+			subject : this.state.subject,
+			name : this.state.name,
+			text : this.state.message,
+			from : this.state.email
+		};
+		console.log(d);
+		this.mg.send(d, (f, msg)=>{
+			console.log(f, msg);
+		});
 	}
 	resetEmail(){
 		this.setState({

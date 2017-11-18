@@ -1,3 +1,53 @@
 .project_page{
+  padding: 40px 0 50px 60px;
 
+  .r_tlt{
+    margin-bottom: 2px;
+    font-weight: normal;
+  }
+
+  .r_s1{
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    background: $color_2;
+    @extend .flex_center;
+    color: #fff;
+    font-size: 42px;
+    text-align: center;
+  }
+
+  .b_ba{
+    border-top:1px solid $color_border_1;
+    padding-top: 32px;
+    margin-top: 32px;
+
+    .t1{
+
+    }
+    .t2{
+      margin-top:4px;
+      display: block;
+      word-break: break-all;
+    }
+    .t3{
+      border-top:1px dashed $color_border_2;
+      padding-top: 12px;
+      margin-top:12px;
+    }
+    .t4{
+      margin-top: 5px;
+    }
+
+    .k1{
+
+    }
+    .k2{
+      color: $color_2;
+    }
+  }
+
+  .b_b2{
+    text-align: right;
+  }
 }
