@@ -17,11 +17,11 @@ const C = {
 
 export default class {
 	constructor(){
-		this.mail = mailgun.client({
-			key: C.key,
-			username: 'api',
-			url : `https://api:${C.key}@api.mailgun.net`
-		});
+		// this.mail = mailgun.client({
+		// 	key: C.key,
+		// 	username: 'api',
+		// 	url : `https://api:${C.key}@api.mailgun.net`
+		// });
 	}
 
 	send(param, callback){
