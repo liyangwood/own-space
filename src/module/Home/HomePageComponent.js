@@ -49,6 +49,7 @@ export default class extends AnimatePage{
 				</RB.Row>
 
 				<h1 className="font_10">{I18N.get('00003')}</h1>
+				<span className="font_10">{I18N.get('000031')}</span>
 			</div>
 		);
 	}

@@ -17,7 +17,8 @@ export default {
 
 	'00001' : 'Hello',
 	'00002' : 'a bit about me',
-	'00003' : 'I am a javascript expert, focus on web for many years. full stack developer.',
+	'00003' : 'I am a javascript geeker, focus on web for many years. full stack and full client developer.',
+	'000031' : 'Enjoy my site to get more information.',
 	'00004' : 'Professional ​info',
 	'00005' : 'Work experience​',
 	'00006' : 'Education',

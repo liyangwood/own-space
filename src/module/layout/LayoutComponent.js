@@ -19,10 +19,10 @@ export const AppHeader = class extends React.Component {
 			<header id="main_header">
 				<div className="h_left">
 					<h1 className="font_0">
-						<Link to="/">Jacky Li</Link>
+						<Link className="an" to="/">Jacky Li</Link>
 					</h1>
 					<h4 className="font_0">
-						<Link to="/">Javascript developer</Link>
+						<Link className="an" to="/">Javascript developer</Link>
 					</h4>
 				</div>
 

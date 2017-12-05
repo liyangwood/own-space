@@ -53,7 +53,7 @@ export default class extends AnimatePage{
 				<a href={I18N.get('resume.linkedIn')} target="_blank">
 					<i className="fa fa-linkedin-square"></i>
 				</a>
-				<a href={I18N.get('resume.fackbook')} target="_blank">
+				<a href={I18N.get('resume.facebook')} target="_blank">
 					<i className="fa fa-facebook-square"></i>
 				</a>
 			</div>
@@ -93,7 +93,7 @@ export default class extends AnimatePage{
 		return (
 			<div className="c_btn_box">
 				<RB.Button className="c_b1" onClick={this.resetEmail.bind(this)}>Reset</RB.Button>
-				<RB.Button className="c_b2" onClick={this.sendEmail.bind(this)} bsStyle="danger">Send</RB.Button>
+				<RB.Button className="c_b2" href={`mailto:${I18N.get('resume.email')}`} bsStyle="danger">Send</RB.Button>
 			</div>
 		);
 	}
