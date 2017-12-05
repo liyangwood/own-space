@@ -1,4 +1,4 @@
-import mailgun from 'mailgun.js';
+// import mailgun from 'mailgun.js';
 import I18N from 'app/I18N';
 
 /*
@@ -25,15 +25,15 @@ export default class {
 	}
 
 	send(param, callback){
-		return this.mail.messages.create(C.domain, {
-			from: param.from,
-			to: I18N.get('resume.email'),
-			subject: param.name +' - ' + param.subject,
-			text: param.text
-		}).then((msg)=>{
-			callback(true, msg);
-		}).catch((e)=>{
-			callback(false, e);
-		});
+		// return this.mail.messages.create(C.domain, {
+		// 	from: param.from,
+		// 	to: I18N.get('resume.email'),
+		// 	subject: param.name +' - ' + param.subject,
+		// 	text: param.text
+		// }).then((msg)=>{
+		// 	callback(true, msg);
+		// }).catch((e)=>{
+		// 	callback(false, e);
+		// });
 	}
 };
