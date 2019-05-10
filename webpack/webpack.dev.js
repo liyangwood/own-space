@@ -19,6 +19,7 @@ const webpackConfig = {
 		host: '127.0.0.1',   //服务器的ip地址
 		port: 3000,  //端口
 		open: true,  //自动打开页面
+		// historyApiFallback: true,
 	},
 	module: {
 		rules: [
