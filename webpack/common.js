@@ -7,7 +7,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const extractSass = new ExtractTextPlugin({
-	filename: "app.[contenthash:6].css"
+	filename: "app.[hash:6].css"
 });
 
 const isDev = process.env.NODE_ENV === 'development';
@@ -17,10 +17,8 @@ const plugins = [
 	new HtmlWebpackPlugin({
 		title: 'Template',
 		template: resolve('./public/index.html'),
-	}),
-	new webpack.optimize.CommonsChunkPlugin({
-		name: 'lib',
 	})
+	
 ];
 if(!isDev){
 	plugins.push(new OptimizeCssAssetsPlugin());
@@ -36,8 +34,20 @@ module.exports = {
 			'react'
 		]
 	},
+	optimization: {
+		splitChunks: {
+				cacheGroups: {
+						commons: {
+								name: "lib",
+								chunks: "initial",
+								minChunks: 2
+						}
+				}
+		}
+	},
+
 	output: {
-		path: resolve('./dist'),
+		path: resolve('./docs'),
 	},
 	resolve: {
 		alias: {
