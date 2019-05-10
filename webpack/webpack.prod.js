@@ -10,7 +10,7 @@ const CleanWebpackPluginConfig = new CleanWebpackPlugin();
 
 const config = {
 	output: {
-		publicPath: '/',
+		publicPath: './',
 		filename: '[name].[hash:12].js',
 		chunkFilename: '[name].[hash:12].chunk.js',
 	},
